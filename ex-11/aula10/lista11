@@ -1,0 +1,20 @@
+#!/bin/bash
+clear
+principal () {
+ cd texto
+ 
+ if [ -e a.txt ]; then
+  cat a.txt
+ echo
+ for i in `cat a.txt`;
+  do
+   echo "X"$i"X "
+  done 
+  echo
+ 
+  else
+   echo "Arquivo nao encontrado"
+  echo
+ fi
+}
+principal

@@ -1,0 +1,20 @@
+#!/bin/bash
+clear
+echo -n "Insira o caminho que deseja consultar: ";read caminho;
+if [ -d $caminho ]
+then
+ echo "Insira o arquivo que deseja consultar: ";read arq;
+  if [ -e $caminho/$arq ]
+  then
+   if [ -s $caminho/$arq ]
+   then
+    cat $caminhp/$arq
+   else
+    echo "O arquivo esta vazio"
+   fi
+  else 
+   echo "O arquivo nao existe no diretorio"
+  fi
+else 
+ echo "O diretorio nao existe"
+fi

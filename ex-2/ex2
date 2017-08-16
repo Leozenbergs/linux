@@ -1,0 +1,15 @@
+#!/bin/bash
+clear
+echo -n "Insira o meio: "; read meio;
+if [ -d $meio ]
+ then
+ echo -n "Insira o arquivo: "; read arq;
+ if [ -e $meio/$arq ]
+  then
+   echo  "O arquivo '$arq' existe em '$meio'"
+  else 
+   echo  "O arquivo '$arq' nao existe em '$meio'"
+ fi
+else
+echo "O diretorio '$meio' nao existe"
+fi

@@ -1,0 +1,9 @@
+#!/bin/bash
+clear 
+echo -n "Insira o arquivo: "; read a;
+if [ -e $a ]
+then
+echo "O arquivo '$a' esta no 'pwd'"
+else
+echo "O arquivo nao existe no 'pwd'"
+fi
